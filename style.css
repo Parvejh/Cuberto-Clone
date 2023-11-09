@@ -1,0 +1,343 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family:"Matter" ;
+}
+
+*::selection{
+    background-color:black;
+    color:white;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+#main{
+    width: 100%;
+}
+
+#nav{
+    width: 100%;
+    padding: 1.4vw 3.1vw;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav img{
+    height: 54px;
+}
+
+#navmenu{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+#navmenu h2{
+    font-weight: 300;
+    font-size: 20px;
+}
+#navmenu i{
+    /* font-weight: 100; */
+    font-size: 30px;
+    margin-top:10px;
+}
+
+#hero{
+    height:100vh;
+    width:100%;
+    padding: 4.5vw 10.5vw;
+}
+#hero h1{
+    font-weight:300;
+    font-size:8.6vw;
+    line-height: 1;
+    letter-spacing:-5px;
+}
+
+#hero #heading2{
+    display: flex;
+    gap:20px;
+}
+
+#hero #headingvideo{
+    display: inline-block;
+    height: 8vw;
+    width: 12vw;
+    overflow: hidden;
+    border-radius:100px;
+    margin-top:10px;
+}
+#hero #headingvideo video{
+    /* height: 100%; */
+    width: 100%;
+    object-fit: cover;
+}
+
+#videopage{
+    width:100%;
+    height: 100vh;
+    overflow:hidden;
+}
+#videopage video{
+    width:100%;
+    /* height: 100%; */
+}
+
+#howwork{
+    width:100%;
+    padding:12vw 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:4vw;
+}
+#howwork #workvideo{
+    width:65%;
+    overflow:hidden;
+}
+#howwork #workvideo video{
+    width:100%;
+    object-fit: cover;
+}
+#howwork #workcontent{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap:4vw;
+}
+#howwork #workcontent h2{
+    font-weight: 390;
+    font-size:2.2vw;
+    line-height: 1;
+}
+#howwork #workcontent button{
+    font-weight: 500;
+    font-size:2vw;
+    padding: 6vw 9vw;
+    border-radius:200px;
+    border:1px solid black;
+    background: white;
+    transition:.3s all ease;
+}
+#howwork #workcontent button:hover{
+    cursor:pointer;
+    color:white;
+    background-color: #000;
+}
+
+#featured{
+    width:100%;
+    background-color: #161616;
+    border-top-right-radius: 5vw;
+    border-top-left-radius: 5vw;
+    color:white;
+    padding:7.5vw 11vw;
+}
+#featured #featuredheadings h1{
+    font-weight: 300;
+    font-size:9.2vw;
+    line-height: 1.3;
+}
+
+#featured #featuredhvideo{
+    width:15vw;
+    height:9vw;
+    overflow:hidden;
+    border-radius: 100px;
+    display: inline-block;
+}
+#featured #featuredhvideo video{
+    width:100%;
+    object-fit: cover;
+    margin-top:-40px;
+}
+
+#featured #featuredprojects{
+    width:92%;
+    /* background-color: red; */
+    margin-top:10vw;
+    display: flex;
+    gap:3vw;
+}
+
+.featuredcolumn{
+    width:44%;
+    display: flex;
+    flex-direction: column;
+    gap:6vw;
+}
+.featuredcolumn:nth-child(2){
+    margin-top:20vw;
+}
+
+.featuredcolumn .fp{
+    display: flex;
+    flex-direction: column;
+    gap:2vw;
+}
+.featuredcolumn .fp h2{
+    font-weight: 300;
+}
+.featuredcolumn .fp .fpvideo{
+    overflow: hidden;
+    border-radius:60px;
+}
+.featuredcolumn .fp .fpvideo video{
+    width:100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+#intouch{
+    position:fixed;
+    bottom:2.5vw;
+    right:3.1vw;
+    height:9.5vw;
+    width: 9.5vw;
+    /* background-color: red; */
+}
+
+#intouch #intouchbg{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    z-index:2;
+    animation: rotate 16s infinite;
+}
+
+#intouch #intouchvid{
+    position: absolute;
+    top:0;
+    left:0;
+    background: transparent;
+    z-index:1;
+}
+#intouch #intouchvid video{
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    scale:.7;
+    /* opacity:0; */
+}
+
+@keyframes rotate {
+    from {
+
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@media (max-width:620px) {
+
+    #nav{
+        padding: 4vw 6vw;
+    }
+    #nav #navmenu h2{
+        display: none;
+    }
+    #hero{
+        width:100%;
+        padding: 29vw 4vw;
+    }
+    #hero h1{
+        font-size:14vw;
+        line-height: .9;
+        letter-spacing:.3px;
+    }
+    #hero #headingvideo{
+        display: inline-block;
+        height: 13vw;
+        width: 20vw;
+    }
+    #videopage video{
+        object-fit: cover;
+        height: 100%;
+    }
+    #howwork{
+        flex-direction: column;
+        padding:10vw 5vw;
+    }
+    #howwork #workvideo{
+        width:100%;
+        overflow:hidden;
+    }
+    #howwork #workcontent{
+        width:100%;
+        gap:10vw;
+    }
+    #howwork #workcontent h2{
+        font-weight: 300;
+        font-size:6vw;
+        line-height: 1.1;
+    }
+    #howwork #workcontent button{
+        font-weight: 500;
+        font-size:5vw;
+        padding:15vw 29vw;
+    }
+    #featured{
+        border-radius:0;
+        padding:8vw 5vw;
+    }
+    #featured #featuredheadings h1{
+        font-size:17vw;
+        line-height: 1;
+    }
+    #featured #featuredhvideo{
+        width:20vw;
+        height:15vw;
+        margin-top:20px;
+    }
+    #featured #featuredprojects{
+        flex-direction: column;
+    }
+    .featuredcolumn{
+        width:100%;
+        flex-direction: column;
+        /* gap:10vw; */
+        align-items: center;
+        justify-content: center;
+    }
+    .featuredcolumn .fp{
+        gap:6vw;
+    }
+
+
+    #intouch{
+        display: none;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
